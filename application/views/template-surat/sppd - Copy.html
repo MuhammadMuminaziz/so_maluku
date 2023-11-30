@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>SPPD - Surat Perintah Perjalanan Dinas</title>
+</head>
+
+<style type="text/css">
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	body {
+		background-color: #FFFFFF;
+		min-height: 33cm;
+		padding: 0.5cm;
+		margin: 0.5cm auto;
+		font-size: 12px;
+		font-family: "Arial";
+	}
+
+	.header {
+		font-size: 14px;
+		font-family: "Arial";
+		font-weight: bold;
+	}
+
+	.sekda {
+		font-size: 18px;
+		font-family: "Arial";
+		font-weight: bold;
+	}
+
+
+
+	table.spt_table {
+		border-collapse: collapse;
+	}
+
+	table.spt_table tr {
+		border: 1px solid;
+		;
+	}
+
+	table.spt_table td {
+		border: 1px solid;
+		padding: 5px;
+	}
+</style>
+
+<body>
+	<table border="0" style="width:100%">
+		<tbody>
+			<tr>
+				<td style="width:15%">
+					<p style="text-align:center"><img src="<?php echo $_SERVER["DOCUMENT_ROOT"] . '/images/logo_pancasila.png' ?>" width="64px" height="64px"></p>
+				</td>
+				<td style="width:70%">
+					<p style="text-align:center;" class="header">PEMERINTAH PROVINSI MALUKU</p>
+					<p style="text-align:center;" class="sekda">SEKRETARIAT DAERAH</p>
+					<p style="text-align: center;">Jalan Raya Pattimura Nomor 1 Ambon, 97124</p>
+					<p style="text-align: center;">Website : www.malukuprov.go.id, Email : setdamaluku09@gmail.com</p>
+
+				</td>
+				<td style="width:15%">&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<hr>
+	<br>
+
+	<table style="width:100%;">
+		<tbody>
+			<tr>
+				<td style="text-align: right;">No : {{nomor_spt}}</td>
+			</tr>
+			<tr>
+				<td style="text-align: right;">Lembar ke : I</td>
+			</tr>
+			<tr>
+				<td style="text-align: center; text-decoration: underline; font-weight: bold;" class="header">SURAT PERINTAH PERJALANAN DINAS</td>
+			</tr>
+
+		</tbody>
+	</table>
+	<br>
+	<table style="width: 100%;" class="spt_table">
+		<tbody>
+			<tr>
+				<td style="text-align:justify; width:5%;">1.</td>
+				<td style="text-align:justify; width:40%;">Pejabat Yang Memberi Perintah</td>
+				<td style="text-align:justify; width:75%;">Gubernur Maluku</td>
+			</tr>
+			<tr>
+				<td style="text-align:justify; width:5%;">2.</td>
+				<td style="text-align:justify; width:40%;">Nama Pegawai yang diperintah</td>
+				<td style="text-align:justify; width:75%;">{{nama_kadis}}</td>
+			</tr>
+			<tr>
+				<td style="text-align:justify; width:5%;">3.</td>
+				<td style="text-align:justify; width:40%;">
+					a. Pangkat dan Golongan <br>
+					b. Jabatan<br>
+					c. Gaji Pokok<br>
+					d. Tingkat menurut peraturan perjalanan
+				</td>
+				<td style="text-align:justify; width:75%;">
+					{{pangkat_golongan}}<br>
+					{{nama_jabatan}}<br>
+					<br>
+					<br>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align:justify; width:5%;">4.</td>
+				<td style="text-align:justify; width:40%;">Maksud Perjalanan Dinas</td>
+				<td style="text-align:justify; width:75%;">{{maksud}}</td>
+			</tr>
+			<tr>
+				<td style="text-align:justify; width:5%;">5.</td>
+				<td style="text-align:justify; width:40%;">Alat angkut yang dipergunakan</td>
+				<td style="text-align:justify; width:75%;">{{transportasi}}</td>
+			</tr>
+			<tr>
+				<td style="text-align:justify; width:5%;">6.</td>
+				<td style="text-align:justify; width:40%;">
+					a. Tempat berangkat <br>
+					b. Tempat Tujuan
+				</td>
+				<td style="text-align:justify; width:75%;">{{maksud}}</td>
+			</tr>
+			<tr>
+				<td style="text-align:justify; width:5%;">7.</td>
+				<td style="text-align:justify; width:40%;">
+					a. Lamanya Perjalanan Dinas<br>
+					b. Tanggal berangkat<br>
+					c. Tanggal harus kembali
+				</td>
+				<td style="text-align:justify; width:75%;">
+					a. {{jumlah_hari}} hari<br>
+					b. {{tanggal_berangkat}}<br>
+					c. {{tanggal_pulang}}</td>
+			</tr>
+			<tr>
+				<td style="text-align:justify; width:5%;">8.</td>
+				<td style="text-align:justify; width:40%;">Pengikut :</td>
+				<td style="text-align:justify; width:75%;">{{pengikut}}</td>
+			</tr>
+			<tr>
+				<td style="text-align:justify; width:5%;">9.</td>
+				<td style="text-align:justify; width:40%;">
+					Pembebanan Anggaran <br>
+					a. Instansi <br>
+					b. Mata Anggaran
+				</td>
+				<td style="text-align:justify; width:75%;">
+					Atas beban : {{nama_opd}} <br>
+					Pasal Anggaran :
+
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align:justify; width:5%;">10.</td>
+				<td style="text-align:justify; width:40%;">Keterangan lain-lain</td>
+				<td style="text-align:justify; width:75%;"></td>
+			</tr>
+
+		</tbody>
+	</table>
+	<br>
+
+	<p style="text-align: right;">Dikeluarkan di : Ambon<br>
+		Pada Tanggal : {{tanggal_cetak}}<br><br>
+		SEKRETARIAT DAERAH<br>
+		<img alt="" src="{{qr_ttdsekda}}" /><br>
+		<u>{{nama_sekda}}</u><br />
+		{{pangkatgol_sekda}}<br />
+		{{nip_sekda}}
+	</p>
+
+
+</body>
+
+</html>

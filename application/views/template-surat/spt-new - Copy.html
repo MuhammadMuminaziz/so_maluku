@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>SPT</title>
+</head>
+
+<style type="text/css">
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	@import url('http://fonts.cdnfonts.com/css/arial');
+
+	body {
+		background-color: #FFFFFF;
+		min-height: 33cm;
+		padding: 0.5cm;
+		margin: 0.5cm auto;
+		font-size: 12px;
+		font-family: 'Arial', sans-serif;
+	}
+
+	.header {
+		font-size: 18px;
+		font-family: "Bookman Old Style";
+		font-weight: bold;
+	}
+
+	.sekda {
+		font-size: 18px;
+		font-family: 'Arial', sans-serif;
+		font-weight: bold;
+	}
+
+	.header_spt {
+		font-size: 16px;
+		font-family: 'Arial', sans-serif;
+		font-weight: bold;
+	}
+
+
+	/*
+	table, th, td, tr {
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+	*/
+</style>
+
+<body>
+	<table border="0" style="width:100%">
+		<tbody>
+			<tr>
+				<td style="text-align: center;">
+					<img src="<?php echo $_SERVER["DOCUMENT_ROOT"] . '/images/logo_pancasila.png' ?>" height="64" width="64">
+					<p style="text-align:center;" class="header">GUBERNUR MALUKU <br><br></p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p style="text-align: center; text-decoration: underline;" class="header_spt">SURAT PERINTAH TUGAS</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p style="text-align: center; text-decoration: underline;" class="header_spt">NO : {{nomor_spt}} TAHUN 2022</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<table style="width: 100%;">
+		<tbody>
+			<tr>
+				<td style="text-align:left; width:20%;">DASAR</td>
+				<td style="text-align:left; width:5%;">:</td>
+				<td style="text-align:left; width:80%;">1. Keputusan Menteri Dalam Negeri Nomor 12 Tahun 1990 Tanggal 12 Pebruari 1990 tentang Pelaksanaan Perjalanan Dinas</td>
+			</tr>
+			<tr>
+				<td style="text-align:left; width:20%;"></td>
+				<td style="text-align:left; width:5%;"></td>
+				<td style="text-align:left; width:80%;">2. Peraturan Gubernur Maluku Nomor 28 Tahun 2019 Tanggal 21 November 2019 Tentang Perjalanan Dinas Dalam Negeri Atas Beban Anggaran Dan Belanja Daerah Tahun Anggaran 2020</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+
+	<table style="width: 100%;">
+		<tbody>
+			<tr>
+				<td style="text-align:center; width:20%;" class="header_spt">M E M E R I N T A H K A N</td>
+			</tr>
+		</tbody>
+	</table>
+	<br><br>
+
+	<table style="width: 100%;">
+		<tbody>
+			<tr>
+				<td style="text-align:left; width:20%;" class="header_spt">KEPADA</td>
+				<td style="text-align:left; width:5%;" class="header_spt">:</td>
+				<td style="text-align:left; width:80%;" class="header_spt">{{nama_kadis}}</td>
+			</tr>
+			<tr>
+				<td style="text-align:left; width:20%;" class="header_spt">JABATAN</td>
+				<td style="text-align:left; width:5%;" class="header_spt">:</td>
+				<td style="text-align:left; width:80%;" class="header_spt">{{nama_jabatan}}</td>
+			</tr>
+			<tr>
+				<td style="text-align:left; width:20%;" class="header_spt">UNTUK</td>
+				<td style="text-align:left; width:5%;" class="header_spt">:</td>
+				<td style="text-align:left; width:80%;">{{untuk}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+
+
+
+	<br>
+
+	<p style="text-align: right;">Dikeluarkan di : Ambon<br>
+		Pada Tanggal : {{tanggal}} </p><br><br>
+	<p style="text-align: right;" class="header_spt">GUBERNUR MALUKU</p><br>
+	<p style="text-align: right;"><u><img alt="" src="{{qr_ttdgub}}" /></u></p><br>
+	<p style="text-align: right;" class="header_spt"><u>{{nama_gub}}</u></p><br>
+
+
+
+</body>
+
+</html>
